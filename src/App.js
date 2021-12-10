@@ -1,5 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+const SPACE_ID = "j6zm7o6y974w";
+const ACCESS_TOKEN = " 63jHrxO7iujkfejFc86ScaF8Pi94jgFkv_A_eqmxLLw";
+
+async function fetchData() {
+  const response = await fetch(
+    "https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master",
+  );
+  const body = await response.json();
+  console.log(body);
+}
 
 function App() {
   return (
